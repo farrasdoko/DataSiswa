@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/popup2">
+
+        <EditText
+            android:id="@+id/etnamed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name"/>
+        <EditText
+            android:id="@+id/etaddressed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="address"/>
+
+            <Button
+                android:id="@+id/btnupdated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UPDATE"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"/>
+
+    </LinearLayout>

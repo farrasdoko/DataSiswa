@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     android:id="@+id/ll_swiperefresh"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,9 +7,25 @@
     android:layout_height="match_parent"
     tools:context="com.gmail.farasabiyyu12.datasiswa.MainActivity">
 
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swifeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-</LinearLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
+
+</RelativeLayout>
