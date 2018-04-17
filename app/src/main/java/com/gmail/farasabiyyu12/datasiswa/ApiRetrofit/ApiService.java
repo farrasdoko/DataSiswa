@@ -2,6 +2,7 @@ package com.gmail.farasabiyyu12.datasiswa.ApiRetrofit;
 
 import com.gmail.farasabiyyu12.datasiswa.ResponseServer.ResponseCreateData;
 import com.gmail.farasabiyyu12.datasiswa.ResponseServer.ResponseDeleteData;
+import com.gmail.farasabiyyu12.datasiswa.ResponseServer.ResponseLogin;
 import com.gmail.farasabiyyu12.datasiswa.ResponseServer.ResponseReadData;
 import com.gmail.farasabiyyu12.datasiswa.ResponseServer.ResponseUpdateData;
 
@@ -41,5 +42,12 @@ public interface ApiService {
             @Field("vsid") String id,
             @Field("vsname") String name,
             @Field("vsaddress") String address
+    );
+
+    @FormUrlEncoded
+    @POST("loginuser.php")
+    Call<ResponseLogin> response_login(
+            @Field("vsusername") String username,
+            @Field("vspassword") String password
     );
 }

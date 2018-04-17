@@ -144,10 +144,10 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<ResponseReadData> call, Response<ResponseReadData> response) {
                 Boolean status = response.body().isSuccess();
                 if (status) {
+                    mSwipeRefreshLayout.setRefreshing(false);
                     dataItems = response.body().getData();
                     CustomAdapter adapter = new CustomAdapter(MainActivity.this, dataItems);
                     recyclerView.setAdapter(adapter);
-                    mSwipeRefreshLayout.setRefreshing(false);
                 }else {
                     mSwipeRefreshLayout.setRefreshing(false);
                 }
@@ -158,26 +158,5 @@ public class MainActivity extends AppCompatActivity {
                 mSwipeRefreshLayout.setRefreshing(false);
             }
         });
-        /*
-        call.enqueue(new Callback<ResponseReadData>() {
-            @Override
-            public void onResponse(Call<ResponseReadData> call, Response<ResponseReadData> response) {
-                Boolean status = response.body().isSuccess();
-                if (status){
-                    dataItems = response.body().getData();
-                    CustomAdapter adapter = new CustomAdapter(MainActivity.this, dataItems);
-                    recyclerView.setAdapter(adapter);
-//                    mSwipeRefreshLayout.setRefreshing(false);
-                }else {
-                    mSwipeRefreshLayout.setRefreshing(false);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseReadData> call, Throwable t) {
-                mSwipeRefreshLayout.setRefreshing(false);
-            }
-        });
-        */
     }
 }

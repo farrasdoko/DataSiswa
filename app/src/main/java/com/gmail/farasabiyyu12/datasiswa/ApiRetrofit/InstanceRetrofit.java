@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class InstanceRetrofit {
 
-    public static final String WebURL = "http://192.168.20.42/latihancrud/";
+    public static final String WebURL = "http://192.168.20.35/latihancrud/";
 
     public static Retrofit setInit(){
         return new Retrofit.Builder()
